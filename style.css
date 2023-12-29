@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+:root{
+  --color-1: #0a0022;
+  --color-2: #047cff;
+  --color-3: #fff;
+}
+
+body{
+  background-color: var(--color-1);
+  font-family: 'Poppins' , Sans-Serif;
+  font-weight: 700;
+}
+
+
+
+/*formatacao header*/
+
+header.cabecalho{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
+  height: 100px;
+  max-width: 1920px;
+  margin: auto;
+}
+
+/*formatacao header .logo-menu*/
+
+header.cabecalho .logo-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+header.cabecalho .logo-menu img{
+  width: 120px;
+}
+
+header.cabecalho .logo-menu h3{
+  color: var(--color-2);
+  font-weight: 700;
+  transition: 0.7s;
+}
+
+header.cabecalho .logo-menu h3:hover{
+  color: var(--color-3);
+  font-weight: 700;
+}
+
+/*formatacao header nav.navbar*/
+
+header.cabecalho .navbar ul li{
+  display: inline-block;
+  padding: 10px;
+  list-style-type: none;
+}
+
+header.cabecalho .navbar ul li a{
+  color: var(--color-2);
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+
+header.cabecalho .navbar ul li a::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-3);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+header.cabecalho .navbar ul li a:hover::after{
+  width: 75%;
+}
+
+/*formatacao header .btn-menu*/
+
+header.cabecalho .btn-menu{
+  margin: 45px;
+}
+
+header.cabecalho .btn-menu a{
+  text-decoration: none;
+  color: var(--color-2);
+  padding: 7px;
+  border: 2px solid var(--color-2);
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: var(--color-3);
+  transition: 0.5s;
+  box-shadow: 1px 1px 21px var(--color-2);
+}
+
+header.cabecalho .btn-menu a:hover{
+  border: 2px solid var(--color-3);
+  color: var(--color-3);
+  background-color: var(--color-2);
+   box-shadow: 1px 1px 21px var(--color-3);
+}
+
+/*formatacao container section#sobre-mim*/
+
+.container{
+  max-width: 1920px;
+}
+
+.blur{
+  position: absolute;
+  box-shadow: 0 0 1000px 70px var(--color-3);
+  z-index: -100;
+  left:390px;
+}
+
+div.container section#sobre-mim{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 15rem 2rem;
+  gap: 250px;
+  height: 706px;
+  visibility: hidden;
+}
+
+div.container section#sobre-mim .biografia{
+  color: var(--color-2);
+}
+
+div.container section#sobre-mim .biografia h1{
+  font-size: 30px;
+  transition: 1s;
+}
+
+div.container section#sobre-mim .biografia span{
+  color: var(--color-3);
+}
+
+div.container section#sobre-mim .biografia p{
+  font-size: 20px;
+  transition: 1s;
+}
+
+div.container section#sobre-mim  .logo-section img{
+  width: 350px;
+}
+
+div.container section#sobre-mim .biografia h1:hover{
+  font-size: 40px;
+}
+
+
+div.container section#sobre-mim .biografia p:hover{
+  font-size: 30px;
+}
+
+/*formatacao container section#Experiencias*/
+
+div.container section#experiencias{
+  transition: 4s;
+  margin: auto;
+}
+
+
+div.container #experiencias h1{
+  text-align: center;
+  padding: 5px;
+  color: var(--color-2);
+  font-weight: 700;
+  font-size: 35px;
+}
+
+div.container #experiencias .icones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+div.container #experiencias .icones i{
+  font-size: 75px;
+  padding: 7px;
+}
+
+div.container #experiencias .icones i#html5{
+  color: orangered;
+}
+
+div.container #experiencias .icones i#css3{
+  color: royalblue;
+}
+
+div.container #experiencias .icones i#js{
+  color: #ffeb3e;
+}
+
+div.container #experiencias .icones i#react{
+  color: skyblue;
+}
+
+div.container #experiencias .icones .html5 label{
+  color: orangered;
+}
+
+div.container #experiencias .icones .css3 label{
+  color: royalblue;
+}
+
+div.container #experiencias .icones .js label{
+  color: #ffeb3e;
+}
+
+div.container #experiencias .icones .react label{
+  color: skyblue;
+}
+
+div.container #experiencias .icones label{
+  opacity: 0;
+  transition:  1s;
+}
+
+div.container #experiencias .icones div i:hover  ~ label{
+  opacity: 1;
+  font-size: 30px;
+}
+
+/*formatacao container section#projetos*/
+
+div.container #projetos{
+  margin: 200px;
+}
+
+div.container #projetos h1{
+  text-align: center;
+  font-size: 35px;
+  color: var(--color-2);
+  font-weight: 700;
+}
+
+div.container #projetos .projetos-grupos{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--color-2);
+  font-weight: 700;
+  margin: 20px;
+}
+
+div.container #projetos .projetos-grupos .projeto1,.projeto2,.projeto3{
+  background: transparent;
+  border: 2px solid var(--color-3);
+  margin: auto;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+div.container #projetos .projetos-grupos h3{
+  font-size: 25px;
+  padding: 2rem 2rem;
+}
+
+div.container #projetos .projetos-grupos p{
+  font-size: 20px;
+  padding: 16px;
+}
+
+div.container #projetos .projetos-grupos .btn-projeto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  padding: 25px;
+}
+
+div.container #projetos .projetos-grupos .btn-projeto a{
+  text-decoration: none;
+  color: var(--color-2);
+  padding: 7px;
+  border: 2px solid var(--color-2);
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: var(--color-3);
+  transition: 0.5s;
+  box-shadow: 1px 1px 21px var(--color-2);
+}
+
+div.container #projetos .projetos-grupos .btn-projeto a:hover{
+  border: 2px solid var(--color-3);
+  color: var(--color-3);
+  background-color: var(--color-2);
+   box-shadow: 1px 1px 21px var(--color-3);
+}
+
+div.container #projetos .projetos-grupos .btn-projeto i{
+  color: black;
+  padding: 2px;
+}
+
+
+div.container #projetos .maisprojetos{
+  text-align: center;
+} 
+
+div.container #projetos .maisprojetos a{
+  text-decoration: none;
+  color: var(--color-3);
+  padding: 7px;
+  border: 2px solid var(--color-3);
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: var(--color-2);
+  transition: 0.5s;
+  box-shadow: 1px 1px 21px var(--color-3);
+}
+
+div.container #projetos .maisprojetos a:hover{
+  border: 2px solid var(--color-2);
+  color: var(--color-2);
+  background-color: var(--color-3);
+   box-shadow: 1px 1px 21px var(--color-2);
+}
+
+/*formatacao footer#redes-sociais*/
+
+footer{
+  transition: 4s;
+  padding: 60px;
+  border-top: 2px solid var(--color-3);
+  max-width: 1920px;
+}
+
+footer .redes-sociais{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer .redes-sociais i{
+  padding: 15px;
+  font-size: 40px;
+  color: white;
+  transition: 1s;
+}
+
+footer .redes-sociais label{
+  color: white;
+  opacity: 0;
+  transition: 1s;
+}
+
+footer .redes-sociais i:hover ~ label{
+  opacity: 1;
+  font-size: 22px;
+}
+
+footer .redes-sociais i:hover{
+  font-size: 50px;
+}
+
+footer h1{
+  text-align: center;
+  color: white;
+  font-size: 35px;
+}
+
+@media(min-width:1439px){
+  div.container section#sobre-mim{
+    height: 800px;
+  }
+}
+
+@media(min-width:1500px){
+  div.container section#sobre-mim{
+    height:1080px;
+    gap: 550px;
+  }
+}
+
+@media(max-width: 1024px){
+  div.container #projetos .projetos-grupos{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    padding: 30px;
+  }
+}
+
+@media(max-width:768px){
+  div.container section#sobre-mim{
+    display: block;
+    position: relative;
+    left: 24%;
+    height: 1000px;
+  }
+  
+  
+  div.container #projetos .projetos-grupos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  div.container #projetos .projetos-grupos .projeto1,.projeto2,.projeto3{
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+@media(max-width:500px){
+  header.cabecalho .navbar{
+    display: none;
+  }
+  
+  .blur{
+    top: 200px;
+    left: 0;
+  }
+  
+  div.container section#sobre-mim{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 20px;
+    max-width: 500px;
+  }
+  
+  div.container section#sobre-mim  .biografia h1{
+    font-size: 30px;
+  }
+  
+  div.container section#sobre-mim  .logo-section img{
+    width: 250px;
+  }
+  
+  div.container #projetos{
+    display: block;
+    height: 1500px;
+  }
+  
+  div.container #projetos h1{
+    position: relative;
+    left: -39px;
+  }
+  
+  div.container #projetos .projetos-grupos{
+    margin-left: -130px;
+  }
+  
+  header.cabecalho .logo-menu img{
+  width: 50px;
+}
+
+div.container #projetos .maisprojetos{
+  width: 130px;
+}
+
+  div.container #projetos .maisprojetos a{
+  text-decoration: none;
+  color: var(--color-3);
+  padding: 7px;
+  border: 2px solid var(--color-3);
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: var(--color-2);
+  transition: 0.5s;
+  box-shadow: 1px 1px 21px var(--color-3);
+  position: absolute;
+  left: -17px;
+}
+
+}
